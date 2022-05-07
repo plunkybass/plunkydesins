@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+  }
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f7f5f5;
+}
+
+/* header--------------------------------------------------------------------------------------------------------------------------- */
+
+.header {
+    filter: opacity(.9);
+    background: url(../imagenes/diseño-de-interiores.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: auto;
+    width: auto;
+    display: grid;
+    
+     
+}
+
+.titulos {
+    
+    display: grid;
+    grid-template-rows: 10fr 1fr;
+    grid-template-columns: auto;
+    justify-content: start;
+    align-items: flex-end;
+    height: 70vh;
+    width: 100vw;
+    
+
+}
+
+
+.logoCabecera {
+    width: 480px;
+    margin: 0 20px;
+}
+
+.h1:hover, .logoCabecera:hover {
+    width: 70%;
+    filter: opacity(0.6);
+    transition: 1s;
+}
+
+.h1 > a {
+    font-weight: 450;
+    font-size: 28px;
+    margin: 0 0 20px 20px;
+    color: #080808;
+    text-decoration: none;
+}
+
+
+/* header end--------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* seccion 1--------------------------------------------------------------------------------------------------------------------------- */
+
+
+.sec1 {
+    display: grid;
+    grid-auto-columns: 22rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    background: url(../imagenes/fondo-acerca-de-nosotros.png);
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    
+    
+}
+
+.itemSction {
+    margin: 244px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+
+}
+
+.sec1A {
+    grid-column: span 2;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 5% ;
+    
+}
+.sec1B {
+    grid-column: span 2;
+    padding: 10%;
+    
+}
+.sec1B > img {
+    grid-column: span 2;
+    width: 100%;
+    height: auto;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.sec1B > img:hover {
+    width: 108%;
+    /* filter: opacity(0.6); */
+    transition: 1s;
+    position: none;
+
+}
+
+/* seccion 1 end--------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* seccion 2 --------------------------------------------------------------------------------------------------------------------------- */
+
+.sec2 {
+    color: white;
+    display: grid;
+    grid-auto-columns: 22rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 2fr));
+    background: url(../imagenes/fondo-nuestro-servicios.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+}
+
+.itemSction2 {
+    margin: 115px 100px;
+    padding: 10% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    
+}
+
+.sec2A {
+    grid-column: span 2;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 150px 100px;
+}
+.sec2B {
+    grid-column: span 2;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+
+
+
+/* seccion 2 end--------------------------------------------------------------------------------------------------------------------------- */
+
+section.sec3 {
+    background: url(../imagenes/diseño-de-interiores.jpg);
+    background-size: cover;
+}
+
+/* nav--------------------------------------------------------------------------------------------------------------------------- */
+
+.nav {
+    background: #080808dd;
+    height: 80px;
+    color: #d4d8d7;
+    position: sticky;
+    background-color: #080808dd;
+    top: 0;
+}
+
+.nav__container {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #d4d8d7;
+}
+
+.nav__menu {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2.5em;
+    
+}
+
+.nav__item {
+    color: #d4d8d7;
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    
+}
+
+.nav__item::after {
+    content: "";
+    display: block;
+    background: #d4d8d7;
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+}
+
+.nav__item:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);;
+}
+
+.nav__input:checked + .nav__menu {
+    background: #080808dd;
+}
+
+.nav__label, .nav__input {
+    display: none;
+}
+
+/* nav end--------------------------------------------------------------------------------------------------------------------------- */
+/*media screen------------------------------------------------------------------------------------------------------------------------*/
+@media  screen and (max-width: 952px) {
+
+    
+    .nav__menu {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 1.5em;
+    }
+
+}
+
+@media (max-width: 772px) {
+
+    
+    .nav__label {
+        display: block;
+        cursor: pointer;
+        z-index: 2;
+    }
+    
+    
+    .nav__menu {
+        
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        background: #090909dd;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
+
+    
+
+    .nav__input:checked + .nav__menu {
+
+        clip-path: circle(100% at center);
+    }
+
+    .itemSction {
+        margin: 50px 0;
+        padding: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sec1A {
+        grid-column: span 2;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 10% ;
+    }
+    .logoCabecera {
+        width: 350px;
+        margin: 0 20px;
+    }
+}
+/*media screen end--------------------------------------------------------------------------------------------------------------------*/
