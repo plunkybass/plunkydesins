@@ -84,7 +84,7 @@ section {
 }
 
 section.sec1 {
-    background: url(../imagenes/fondo-acerca-de-nosotros.png);
+    background: url(plunkydesins/imagenes/fondo-acerca-de-nosotros.png);
     background-size: cover;
 }
 
@@ -109,7 +109,7 @@ section.sec2 p {
 }
 
 section.sec3 {
-    background: url(../imagenes/diseÃ±o-de-interiores.jpg);
+    background: url(plunkydesins/imagenes/diseÃ±o-de-interiores.jpg);
     background-size: cover;
 }
 
